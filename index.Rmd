@@ -7,7 +7,10 @@ output: html_document
 
 An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
 
+This assignment focuses on the pertinent issue of incarceration in America. Compared to other countries, the United States incarcerates people at an alarmingly high rate. Furthermore, unjust trials and implicit (and explicit) bias have led Black individuals to make up a disproportionate number of these people. Previously, data on incarceration trends was limited only to local areas or to the country as a whole, and local trends were not compared or examined on a country-wide level to uncover possible patterns in this data. The Vera project has done incredible work collecting and corroborating incarceration data. In this analysis, my goal is to expand on the work of the Vera project by comparing the rate of incarceration among states in cities (which generally swing more left politically) and rural areas (which tend to be more conservative) in an effort to determine how political stance correlates to incarceration rate.
+
 ### Summary Information
+
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
