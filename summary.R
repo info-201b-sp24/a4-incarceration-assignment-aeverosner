@@ -1,12 +1,14 @@
 # Open dataset and view data
 library(dplyr)
 jail_data <- read.csv("https://raw.githubusercontent.com/melaniewalsh/Neat-Datasets/main/us-prison-jail-rates.csv")
-# View(jail_data)
+#View(jail_data)
+nrow(jail_data)
+ncol(jail_data)
 
 # Calculate summary statistics for different size cities
 # average rate overall
-avg_rate <- mean(jail_data$total_prison_pop_rate)
-avg_rate_black <- mean(jail_data$black_prison_pop_rate)
+avg_rate <- mean(jail_data$total_prison_pop_rate, na.rm = TRUE)
+avg_rate_black <- mean(jail_data$black_prison_pop_rate, na.rm = TRUE)
 
 #avg rate rural
 avg_rate_rural <- jail_data %>%
@@ -73,3 +75,5 @@ avg_rate_2018 <- jail_data %>%
 avg_rate_2018
 diff_rate <- avg_rate_2018 - avg_rate_1970
 diff_rate
+
+
