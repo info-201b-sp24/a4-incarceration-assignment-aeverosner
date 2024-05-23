@@ -11,6 +11,9 @@ This assignment focuses on the pertinent issue of incarceration in America. Comp
 
 ### Summary Information
 
+```{r setup, include=FALSE}
+source()
+```
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
