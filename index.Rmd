@@ -70,15 +70,16 @@ chart_1_graph
 
 ### Variable Comparison Chart
 
+``````{r chart2, echo = FALSE}
+source("chart2_population.R")
+chart_2_graph
+```
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+This chart depicts the average incarceration rate of black and white individuals over increasing populations. My intention with including this chart were to investigate a trend in incarceration rate as population increased from rural to suburban to urban areas, as well as compare this trend among black populations and white populations. The data I used for this is from the year 2010, which was far enough back that there was still data for most of the counties, but recent enough that the observable pattern is still relevant to today's trends. Though the data is slightly scattered for areas with lower populations (particularly among black incarcerated people), a clear trend can be seen in which black people are imprisoned at a much higher rate than white people in areas of all population sizes. Additionally, it appears that in general, incarceration rate decreases as population increases (though this pattern is reversed in populations greater than 800,000) for black people. This trend is not seen in incarceration rates for white people.
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
 
-### Map
+### x
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
