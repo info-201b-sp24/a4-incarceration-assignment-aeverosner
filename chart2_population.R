@@ -17,7 +17,7 @@ chart_2_data <- jail_data_recent %>%
 chart_2_graph <- ggplot(chart_2_data, aes(x = total_pop)) +
   geom_line(aes(y = avg_rate_pop_white, color = "White")) +
   geom_line(aes(y = avg_rate_pop_black, color = "Black")) +
-  ylim(NA, 40000)+
+  scale_y_log10() +
   labs(title = "Incarceration Rates Versus Population",
        x = "Population",
        y = "Average Incarceration Rate",
@@ -25,4 +25,3 @@ chart_2_graph <- ggplot(chart_2_data, aes(x = total_pop)) +
   scale_color_manual(values = c("Black" = "black", "White" = "blue")) +
   theme_minimal()
 chart_2_graph
-
