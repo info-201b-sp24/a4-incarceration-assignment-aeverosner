@@ -66,32 +66,28 @@ Here's an example of how to run an R script inside an RMarkdown file:
 ``````{r chart1, echo = FALSE}
 source("chart1_time.R")
 chart_1_graph
-```
+``````
+This graph depicts the average incarceration rate of different groups over time. The red line shows the average rate of imprisonment agross all groups in all areas, the blue line denotes this rate for white people, and the black like denotes this rate among black people. I chose to compare black, white and total average incarceration rate with the goal of having a clear view how incarceration rates have changed relative to each other over time. This graph shows that over time, the average incarceration rate for black people has consistently been much higher than that of white people. Additionally, this rate has increased over time for both groups, though there is much more variation in the rate for black individuals. Interestingly, the graph indicates a sharp decline in black incarceration rates between ~2008 and 2017. I wonder if this decrease was related to the fact that the US had a liberal president during this time or possibly that our president during this period was also black. However, even with this noticeable decline in Black incarceration rates recently, Black people are still put in prison at an alarmingly high rate compared to other groups.
 
 ### Variable Comparison Chart
 
 ``````{r chart2, echo = FALSE}
 source("chart2_population.R")
 chart_2_graph
-```
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+``````
 
 This chart depicts the average incarceration rate of black and white individuals over increasing populations. My intention with including this chart were to investigate a trend in incarceration rate as population increased from rural to suburban to urban areas, as well as compare this trend among black populations and white populations. The data I used for this is from the year 2010, which was far enough back that there was still data for most of the counties, but recent enough that the observable pattern is still relevant to today's trends. Though the data is slightly scattered for areas with lower populations (particularly among black incarcerated people), a clear trend can be seen in which black people are imprisoned at a much higher rate than white people in areas of all population sizes. Additionally, it appears that in general, incarceration rate decreases as population increases (though this pattern is reversed in populations greater than 800,000) for black people. This trend is not seen in incarceration rates for white people.
 
 
 ### x
-``````{r chart2, echo = FALSE}
+``````{r chart3, echo = FALSE}
 source("chart3_map.R")
 chart3_map
-```
+``````
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
 This chart depicts a map of the US in which the color of each state is representative of the average incarceration rate - number of people imprisoned per 100,000 residents - of Black individuals across that state. Examining the graph, it appears that midwestern states and southern states generally have slightly higher incarceration rates, as indicated by the deeper shade of blue in those areas. This corroborates my prediction that there is a correlation between a state's general political standing and its incarceration rate, as these states tend to sway towards the more conservative end - maps on recent elections support this. Along the same lines, more liberal states such as california, Washington, and the Northeast tended to have lower incarceration rates, as indicated by their lighter color on the map. Interestingly, Nebraska had the highest incarceration rate and deepest shade of blue on the map by a large margin. Given its generally conservative political standing, its high rate is relatively unsurprising,, but the large margin between it and the rest of the states could be the result of an outlier in the data.
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
 
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
 
