@@ -12,6 +12,8 @@ This assignment focuses on the pertinent issue of incarceration in America. Comp
 ### Summary Information
 
 ```{r setup, include=FALSE}
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+knitr::opts_chunk$set(echo = TRUE)
 source("summary.R")
 ```
 
@@ -56,7 +58,7 @@ The first chart that you will create and include will show the trend over time o
 - Show more than one, but fewer than ~10 trends
   - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear legend title
 
 When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
@@ -79,7 +81,8 @@ chart_2_graph
 This chart depicts the average incarceration rate of black and white individuals over increasing populations. My intention with including this chart were to investigate a trend in incarceration rate as population increased from rural to suburban to urban areas, as well as compare this trend among black populations and white populations. The data I used for this is from the year 2010, which was far enough back that there was still data for most of the counties, but recent enough that the observable pattern is still relevant to today's trends. Though the data is slightly scattered for areas with lower populations (particularly among black incarcerated people), a clear trend can be seen in which black people are imprisoned at a much higher rate than white people in areas of all population sizes. Additionally, it appears that in general, incarceration rate decreases as population increases (though this pattern is reversed in populations greater than 800,000) for black people. This trend is not seen in incarceration rates for white people.
 
 
-### x
+### 
+
 ``````{r chart3, echo = FALSE}
 source("chart3_map.R")
 chart3_map
