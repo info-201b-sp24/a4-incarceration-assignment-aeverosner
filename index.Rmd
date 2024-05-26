@@ -80,6 +80,10 @@ This chart depicts the average incarceration rate of black and white individuals
 
 
 ### x
+``````{r chart2, echo = FALSE}
+source("chart3_map.R")
+chart3_map
+```
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
