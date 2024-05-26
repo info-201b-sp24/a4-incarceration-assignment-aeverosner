@@ -87,6 +87,8 @@ chart3_map
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
+This chart depicts a map of the US in which the color of each state is representative of the average incarceration rate - number of people imprisoned per 100,000 residents - of Black individuals across that state. Examining the graph, it appears that midwestern states and southern states generally have slightly higher incarceration rates, as indicated by the deeper shade of blue in those areas. This corroborates my prediction that there is a correlation between a state's general political standing and its incarceration rate, as these states tend to sway towards the more conservative end - maps on recent elections support this. Along the same lines, more liberal states such as california, Washington, and the Northeast tended to have lower incarceration rates, as indicated by their lighter color on the map. Interestingly, Nebraska had the highest incarceration rate and deepest shade of blue on the map by a large margin. Given its generally conservative political standing, its high rate is relatively unsurprising,, but the large margin between it and the rest of the states could be the result of an outlier in the data.
+
 The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
 
 - Your map needs a title
