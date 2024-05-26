@@ -10,10 +10,17 @@ An introduction of the problem domain and a description of the variable(s) you a
 This assignment focuses on the pertinent issue of incarceration in America. Compared to other countries, the United States incarcerates people at an alarmingly high rate. Furthermore, unjust trials and implicit (and explicit) bias have led Black individuals to make up a disproportionate number of these people. Previously, data on incarceration trends was limited only to local areas or to the country as a whole, and local trends were not compared or examined on a country-wide level to uncover possible patterns in this data. The Vera project has done incredible work collecting and corroborating incarceration data. In this analysis, my goal is to expand on the work of the Vera project by comparing the rate of incarceration among states in cities (which generally swing more left politically) and rural areas (which tend to be more conservative) in an effort to determine how political stance (and how populated an area is) correlates to incarceration rate.
 
 ### Summary Information
+```{r install-packages, include=FALSE, message=FALSE, warning=FALSE}
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
+install.packages("sf")
+install.packages("tigris")
+```
 
 ```{r setup, include=FALSE}
-options(repos = c(CRAN = "https://cran.rstudio.com/"))
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(sf)
+library(tigris)
+options(tigris_use_cache = TRUE)
 source("summary.R")
 ```
 
@@ -21,31 +28,31 @@ Using the values from the dataset, I determined that the overall average rate of
 
 ### The Dataset
 
-$Who collected the data?$
+$Who$ $collected$ $the$ $data?$
 
 The data was collected by a team of researchers at Vera, which is a program fighting for prison reform and aiming to end the unjust incarceration of people of color and other underrepresented groups.
 
-$How was the data collected or generated?$
+$How$ $was$ $the$ $data$ $collected$ $or$ $generated?$
 
 The data was collected using data from the Census of Jails, the Annual Survey of Jails, and the National Corrections Reporting Program. Data from these three sources were merged into one large dataset that contains information on incarceration across the country at a county level.
 
-$Why was the data collected?$
+$Why$ $was$ $the$ $data$ $collected?$
 
 The data was collected in an effort to provide a more detailed look at incarceration trends across the country. Previously, data had only been available at the state level, which fails to capture the nuances of incarceration trends more locally. Additionally, the broadness of previous datasets made it difficult to apply to the local level. This dataset helps fill in those gaps.
 
-$How many observations (rows) are in your data?$
+$How$ $many$ $observations$ $(rows)$ $are$ $in$ $your$ $data?$
 
 There are 153,811 rows in this dataset.
 
-$How many features (columns) are in the data?$
+$How$ $many$ $features$ $(columns)$ $are$ $in$ $the$ $data?$
 
 There are 23 columns.
 
-$What, if any, ethical questions or questions of power do you need to consider when working with this data?$
+$What,$ $if$ $any,$ $ethical$ $questions$ $or$ $questions$ $of$ $power$ $do$ $you$ $need$ $to$ $consider$ $when$ $working$ $with$ $this$ $data?$
 
 This dataset does an excellent job of upholding ethical principles. given that the data is entirely anonymous and its collection likely did not harm anyone involved, I don't see any ethical issues that can be called into question. As for questions of power, I believe it's important to acknowledge who initially collected the data and how their biases could have interfered.
 
-$What are possible limitations or problems with this data?   (at least 200 words)$
+$What$ $are$ $possible$ $limitations$ $or$ $problems$ $with$ $this$ $data?$   (at least 200 words)
 
 One major limitation that I forsee when using this data is that there are quite a few spaces that are entered as "N/A". This is expecially true for the rural areas, due to the fact that their population is smaller and therefore they are less likely to have people of certain, less populous, demographics. Along these lines, one other issue I can see coming into play with this dataset is the difference in the sheer amount of data between urban areas and small or mid-size cities and rural areas. Because large cities have significantly more people, they are data is less likely to be skewed by outliers and more likely to portray an accurate incarceration rate. On the contrary, because of the small population of small cities and rural areas, the data is easily skewed because a one person counts for a much larger portion of the population. In addition to the challenge of differing sample sizes, another problem with this dataset is that there is no information on the overall demographics of a city or town. This is problematic because if a city has a larger percentage of black people, then they will naturally incarcerate more black people as this population makes up much of the demographic. However, this information will be inaccurately portrayed as the city simply having a much higher incarceration rate for reasons other than demographics.
 
